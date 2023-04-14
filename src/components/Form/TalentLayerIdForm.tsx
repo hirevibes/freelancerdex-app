@@ -51,9 +51,9 @@ function TalentLayerIdForm() {
         );
 
         const handlePrice = await contract.getHandlePrice(submittedValues.handle);
-
         const tx = await contract.mint(import.meta.env.VITE_PLATFORM_ID, submittedValues.handle, {
           value: handlePrice,
+          gasLimit: 500000,
         });
         await createTalentLayerIdTransactionToast(
           {
