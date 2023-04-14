@@ -38,7 +38,6 @@ export const getUserById = (id: string): Promise<any> => {
           country
           headline
           id
-          picture
           title
           timezone
           skills_raw
@@ -67,7 +66,6 @@ export const getUserByAddress = (address: string): Promise<any> => {
           country
           headline
           id
-          picture
           title
           timezone
           skills_raw
