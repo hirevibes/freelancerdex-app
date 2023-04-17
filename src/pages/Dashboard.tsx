@@ -6,14 +6,15 @@ import UserPayments from '../components/UserPayments';
 import UserProposals from '../components/UserProposals';
 import UserServices from '../components/UserServices';
 import TalentLayerContext from '../context/talentLayer';
+import GradientText from '../components/Shared/GradientText';
 
 function Dashboard() {
   const { account, user } = useContext(TalentLayerContext);
 
   return (
     <div className='max-w-7xl mx-auto text-gray-900 sm:px-4 lg:px-0'>
-      <p className='text-5xl font-medium tracking-wider mb-8'>
-        Your <span className='text-indigo-600'>dashboard</span>
+      <p className='text-3.5xl font-bold tracking-wider mb-8'>
+        Your <GradientText text='dashboard' />
       </p>
 
       <Steps targetTitle={'Access your dashboard'} />

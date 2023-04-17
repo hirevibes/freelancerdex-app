@@ -9,7 +9,9 @@ module.exports = {
       colors: {
         'gradient-start': '#31E5FF',
         'gradient-middle': '#448FFF',
-        'gradient-end': '#FF82BE'
+        'gradient-end': '#FF82BE',
+        'primary': '#263238',
+        'secondary': '#414A4F',
       }
     },
   },

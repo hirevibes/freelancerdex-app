@@ -9,11 +9,11 @@ import { NavLink } from 'react-router-dom';
 import { ChatBubbleLeftIcon } from '@heroicons/react/20/solid';
 
 const navigation = [
-  { name: 'Presentation', href: '/', icon: HomeIcon, current: false },
-  { name: 'Your dashboard', href: '/dashboard', icon: PresentationChartBarIcon, current: true },
-  { name: 'Find jobs', href: '/services', icon: MagnifyingGlassIcon, current: false },
+  { name: 'Home', href: '/', icon: HomeIcon, current: false },
+  { name: 'My Dashboard', href: '/dashboard', icon: PresentationChartBarIcon, current: true },
+  { name: 'Find Jobs', href: '/services', icon: MagnifyingGlassIcon, current: false },
   { name: 'Post a job', href: '/services/create', icon: PlusIcon, current: false },
-  { name: 'Find talents', href: '/talents', icon: SparklesIcon, current: false },
+  { name: 'Find Freelancer', href: '/talents', icon: SparklesIcon, current: false },
   { name: 'Messaging', href: '/messaging', icon: ChatBubbleLeftIcon, current: false },
 ];
 
@@ -26,10 +26,10 @@ function SideMenu() {
           to={item.href}
           end
           className={({ isActive }) =>
-            (isActive ? 'bg-indigo-800 text-white' : 'text-indigo-100 hover:bg-indigo-700') +
-            ' group flex items-center px-2 py-2 text-base font-medium rounded-md'
+            (isActive ? 'bg-secondary text-white' : 'text-white hover:bg-secondary') +
+            ' group flex items-center px-2 py-2 text-sm font-bold rounded-md'
           }>
-          <item.icon className='mr-3 h-5 w-5 flex-shrink-0 text-indigo-300' aria-hidden='true' />
+          <item.icon className='mr-3 h-5 w-5 flex-shrink-0 text-gray-200' aria-hidden='true' />
           {item.name}
         </NavLink>
       ))}

@@ -1,6 +1,7 @@
 import UserItem from '../components/UserItem';
 import useUsers from '../hooks/useUsers';
 import SearchTalentButton from '../components/Form/SearchTalentButton';
+import GradientText from '../components/Shared/GradientText';
 
 function Talents() {
   const queryString = window.location.search;
@@ -9,8 +10,8 @@ function Talents() {
 
   return (
     <div className='max-w-7xl mx-auto text-gray-900 sm:px-4 lg:px-0'>
-      <p className='text-5xl font-medium tracking-wider mb-8'>
-        All <span className='text-indigo-600'>Talents </span>
+      <p className='text-3.5xl font-bold tracking-wider mb-8'>
+        Find <GradientText text='Freelancers' />
       </p>
 
       {searchQuery && users.length > 0 && (
