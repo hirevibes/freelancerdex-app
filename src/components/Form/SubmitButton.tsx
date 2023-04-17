@@ -1,5 +1,6 @@
 import { useWeb3Modal } from '@web3modal/react';
 import { useAccount } from 'wagmi';
+import GradientButton from '../Shared/GradientButton';
 
 function SubmitButton({
   isSubmitting,
@@ -12,7 +13,7 @@ function SubmitButton({
   const { open: openConnectModal } = useWeb3Modal();
 
   return (
-    <div className='flex flex-row justify-between items-center ml-4 sm:ml-2'>
+    <div className='flex flex-row justify-between items-center ml-4 sm:ml-2 w-full'>
       {isSubmitting ? (
         <button
           disabled
@@ -36,20 +37,15 @@ function SubmitButton({
           Loading...
         </button>
       ) : isConnected ? (
-        <button
-          type='submit'
-          className='px-5 py-2 border border-indigo-600 rounded-md hover:text-indigo-600 hover:bg-white text-white bg-indigo-700'>
-          {label}
-        </button>
+        <GradientButton type='submit' text={label} />
       ) : (
-        <button
+        <GradientButton
+          text='Connect Wallet'
+          type='button'
           onClick={() => {
             openConnectModal();
           }}
-          type='button'
-          className='px-5 py-2 border border-indigo-600 rounded-md hover:text-indigo-600 hover:bg-white text-white bg-indigo-700'>
-          {'Connect first'}
-        </button>
+        />
       )}
     </div>
   );

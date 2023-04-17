@@ -1,5 +1,5 @@
 import { Menu, Transition } from '@headlessui/react';
-import { ConnectButton } from '@web3modal/react';
+import { ConnectButton, Web3Button } from '@web3modal/react';
 import { Fragment, useContext } from 'react';
 import { useEnsAvatar } from 'wagmi';
 import TalentLayerContext from '../context/talentLayer';

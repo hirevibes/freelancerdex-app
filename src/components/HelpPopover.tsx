@@ -5,8 +5,8 @@ function HelpPopover(props: { children: React.ReactNode }) {
   const [showHelp, setShowHelp] = useState(false);
 
   return (
-    <div className='absolute -right-2 md:right-2 -top-2.5'>
-      <p className='flex items-center text-xs font-light text-gray-500 dark:text-gray-400'>
+    <div className='absolute right-0 top-0.5'>
+      <p className='flex items-center text-xs font-light text-gray-700'>
         <button
           className='p-1'
           onClick={e => {
